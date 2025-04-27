@@ -1,37 +1,33 @@
-# Diaeresis Updater for Publii Sites
+# Publii Diaeresis and Smart Quotes Updater
 
-## Overview
+This Python script scans your [Publii](https://getpublii.com/) site's SQLite database and updates text inside posts to:
 
-This Python script scans a Publii-generated SQLite database and automatically updates words to include the **diaeresis** (¨), following the editorial style of **The New Yorker**. Examples include changing **cooperation** to **coöperation** or **reenter** to **reënter**.
+- Correctly apply **diaereses** (¨) to appropriate words (e.g., `cooperate` ➔ `coöperate`)
+- Optionally replace **straight quotes** with **smart (curly) quotes** (e.g., `"example"` ➔ `“example”`)
+- Fix common casual word usages (e.g., `webpage` ➔ `Web page`, `gonna` ➔ `going to`)
 
-The diaeresis plays a vital role in clarifying pronunciation. It signals that two adjacent vowels should be pronounced separately, preventing ambiguity and ensuring that words are understood as intended. Without it, a word like cooperation can momentarily suggest an unintended pronunciation like “coo-peration.” Written as *coöperation*, the structure and rhythm of the word become immediately clear. Restoring the diaeresis strengthens the connection between spelling and sound, preserving the precision and nuance that English once prioritized. It is a stylistic choice—and a small but meaningful way to respect the integrity of language and enhance the reader’s experience.
-
-Note: In building the replacement list, the diaeresis is used where vowel separation is needed without a hyphen. If a word already includes a hyphen (e.g., *co-opt*), it fulfills that role; adding a diaeresis would be redundant and unorthodox. This script applies diaereses only where pronunciation confusion is likely and no hyphen is present.
-
-This tool makes it easy for Publii users and editors to implement this stylistic refinement consistently across their websites.
+It ensures a more precise, formal, and polished English writing style across your site.
 
 ---
 
-## Why use this?
+## Why use it?
 
-Publii stores website content in a SQLite database. Manually updating each post or entry to match New Yorker-style diaereses would be tedious and error-prone.
+English words that combine vowels across syllables (like "cooperate" or "reelect") traditionally used the diaeresis to clarify pronunciation. Restoring this usage improves readability and reflects a more careful, literate style.
 
-This script helps by:
+Similarly, replacing straight quotation marks with smart (curly) quotes enhances typographic quality and aligns your site with professional publishing standards.
 
-- Automatically identifying and correcting eligible words.
-- Covering multiple word forms (like *cooperating* ➜ *coöperating*).
-- Ensuring consistent use of diaereses across your website.
-- Saving considerable time.
+This script allows you to make these corrections **automatically and safely** across your Publii site.
 
 ---
 
-## Features
+## How it works
 
-- Scans all tables and text fields in your SQLite database.
-- Applies replacements from an extensive, scholarly diaeresis dictionary.
-- Automatically handles capitalization.
-- Only updates entries that require changes (safe and efficient).
-- Prints informative messages about what’s updated.
+- Connects directly to your site's `db.sqlite` file.
+- Scans the `posts` table, updating the `title` and `text` fields.
+- Only words listed in the internal dictionary are replaced — no uncontrolled edits.
+- Optionally replaces straight quotes with properly matched opening/closing smart quotes.
+- Supports **dry-run mode** to preview changes without modifying your database.
+- Automatically creates a backup (`db.sqlite.bak`) unless disabled.
 
 ---
 
@@ -74,17 +70,40 @@ sqlite_file = "/path-to-your-Publii-folder/sites/site-name/input/db.sqlite"
 
 ### 4. Run the script
 
+Preview changes without modifying anything:
+
+```bash
+python3 diaeresis-updater.py --dry-run
+```
+
+Apply changes to your database:
+
 ```bash
 python3 diaeresis-updater.py
+```
+
+Skip the backup (not recommended)
+
+```bash
+python3 diaeresis-updater.py --no-backup
+```
+
+Adjusting settings (optional)
+
+Inside the script:
+
+```python
+apply_smart_quotes = True  # Set to False to disable smart quotes replacement
 ```
 
 Example output:
 
 ```
-Scanning table: posts
-Updated row 15 in table posts
-Updated row 47 in table posts
-Done.
+📋 Words that would be changed (dry run):
+- [posts][row 21][text]: website ➔ Web site
+- [posts][row 33][text]: webpage ➔ Web page, smart quotes applied
+- [posts][row 68][text]: website ➔ Web site
+- [posts][row 108][text]: Cooperation ➔ Coöperation, Reemphasize ➔ Reëmphasize, smart quotes applied
 ```
 
 ### 5. Sync your website
@@ -95,7 +114,7 @@ With the changes made in the database, press the "Sync your website" button on P
 
 ## Important
 
-- **Always make a backup** of your Publii database before running.
+- This script **always makes a backup** of your Publii database before running unless --no-backup is specified.
 - This script directly modifies your database upon execution.
 - It only replaces words explicitly defined in its built-in dictionary.
 
