@@ -4,9 +4,11 @@
 
 This Python script scans a Publii-generated SQLite database and automatically updates words to include the **diaeresis** (¨), following the editorial style of **The New Yorker**. Examples include changing **cooperation** to **coöperation** or **reenter** to **reënter**.
 
-The diaeresis serves a vital role in making English clearer and more readable. It indicates that two adjacent vowels should be pronounced separately, preventing ambiguity and ensuring that words are understood as intended. Without it, a word like cooperation can momentarily confuse the reader, suggesting an unintended pronunciation like “coo-peration.” Written as coöperation, the structure and rhythm of the word become immediately clear. Restoring the diaeresis strengthens the connection between how words are spelled and how they sound, preserving the precision and nuance that English once prioritized. It is a stylistic choice, and a small (but meaningful) way to respect the integrity of language and to enhance the reader’s experience.
+The diaeresis plays a vital role in clarifying pronunciation. It signals that two adjacent vowels should be pronounced separately, preventing ambiguity and ensuring that words are understood as intended. Without it, a word like cooperation can momentarily suggest an unintended pronunciation like “coo-peration.” Written as *coöperation*, the structure and rhythm of the word become immediately clear. Restoring the diaeresis strengthens the connection between spelling and sound, preserving the precision and nuance that English once prioritized. It is a stylistic choice—and a small but meaningful way to respect the integrity of language and enhance the reader’s experience.
 
-This script makes it easy for Publii users and editors to consistently implement this stylistic choice across their websites. This may be adapted for other text search and replace uses in your Publii site database.
+Note: In building the replacement list, the diaeresis is used where vowel separation is needed without a hyphen. If a word already includes a hyphen (e.g., *co-opt*), it fulfills that role; adding a diaeresis would be redundant and unorthodox. This script applies diaereses only where pronunciation confusion is likely and no hyphen is present.
+
+This tool makes it easy for Publii users and editors to implement this stylistic refinement consistently across their websites.
 
 ---
 
