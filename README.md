@@ -4,7 +4,7 @@
 
 This Python script scans a Publii-generated SQLite database and automatically updates words to include the **diaeresis** (¨), following the editorial style of **The New Yorker**. Examples include changing **cooperation** to **coöperation** or **reenter** to **reënter**.
 
-The diaeresis clarifies that two adjacent vowels should be pronounced separately. While most modern style guides no longer use it, The New Yorker continues this tradition, providing clarity and elegance to written text.
+The diaeresis serves a vital role in making English clearer and more readable. It indicates that two adjacent vowels should be pronounced separately, preventing ambiguity and ensuring that words are understood as intended. Without it, a word like cooperation can momentarily confuse the reader, suggesting an unintended pronunciation like “coo-peration.” Written as coöperation, the structure and rhythm of the word become immediately clear. Restoring the diaeresis strengthens the connection between how words are spelled and how they sound, preserving the precision and nuance that English once prioritized. It is a stylistic choice, and a small (but meaningful) way to respect the integrity of language and to enhance the reader’s experience.
 
 This script makes it easy for Publii users and editors to consistently implement this stylistic choice across their websites. This may be adapted for other text search and replace uses in your Publii site database.
 
