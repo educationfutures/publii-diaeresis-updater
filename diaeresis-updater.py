@@ -26,6 +26,8 @@ roots = {
     "coordinating": "coördinating",
     "coordination": "coördination",
     "coordinator": "coördinator",
+    "naive": "naïve",
+    "naivete": "naïveté",
     "preeminence": "preëminence",
     "preeminent": "preëminent",
     "preemploy": "preëmploy",
