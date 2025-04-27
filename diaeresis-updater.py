@@ -8,7 +8,7 @@ import sys
 sqlite_file = "/path-to-your-Publii-folder/sites/site-name/input/db.sqlite"  # <-- Adjust to your path
 dry_run = "--dry-run" in sys.argv
 create_backup = "--no-backup" not in sys.argv
-apply_smart_quotes = True  # Set False if you ever want to disable smart quotes
+apply_smart_quotes = False  # Set True if you ever want to enable smart quotes -- note this currently may break your embedded HTML
 
 print(f"Dry run mode: {dry_run}")
 print(f"Create backup: {create_backup}")
