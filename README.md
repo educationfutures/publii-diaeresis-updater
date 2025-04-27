@@ -10,7 +10,7 @@ This script makes it easy for Publii users and editors to consistently implement
 
 ---
 
-## Why Use This?
+## Why use this?
 
 Publii stores website content in a SQLite database. Manually updating each post or entry to match New Yorker-style diaereses would be tedious and error-prone.
 
@@ -33,7 +33,7 @@ This script helps by:
 
 ---
 
-## Installation and Usage
+## Installation and usage
 
 ### 1. Requirements
 
