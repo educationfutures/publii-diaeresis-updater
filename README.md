@@ -41,6 +41,8 @@ This script helps by:
 
 ### 2. Setup
 
+First, make sure to back up your Publii site as changes made are not reversible.
+
 Clone this repository or download the script:
 
 ```bash
@@ -106,14 +108,6 @@ After:
 
 > Coöperation and coördination are key to reëvaluating our plans.
 
----
-
-## Future Enhancements
-
-- Dry-run preview (show changes without applying them).
-- Automatic backups of databases.
-- External dictionary files (JSON/YAML) for easy updates.
-- A reverse mode to remove diaereses if needed.
 
 ---
 
