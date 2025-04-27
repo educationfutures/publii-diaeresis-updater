@@ -6,7 +6,7 @@ This Python script scans a Publii-generated SQLite database and automatically up
 
 The diaeresis clarifies that two adjacent vowels should be pronounced separately. While most modern style guides no longer use it, The New Yorker continues this tradition, providing clarity and elegance to written text.
 
-This script makes it easy for Publii users and editors to consistently implement this stylistic choice across their websites and can be adapted for other text search and replace uses in the database used by your Publii site.
+This script makes it easy for Publii users and editors to consistently implement this stylistic choice across their websites. This may be adapted for other text search and replace uses in your Publii site database.
 
 ---
 
