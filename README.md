@@ -1,4 +1,4 @@
-# New Yorker-style Diaeresis Updater for Publii Sites
+# Diaeresis Updater for Publii Sites
 
 ## Overview
 
