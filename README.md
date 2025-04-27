@@ -52,7 +52,7 @@ cd publii-diaeresis-updater
 
 ### 3. Configure
 
-Open `NewYorkerifization.py` and modify this line to point to your database:
+Open `diaeresis-updater.py` and modify this line to point to your database:
 
 ```python
 sqlite_file = "/path-to-your-Publii-folder/sites/site-name/input/db.sqlite"
@@ -61,7 +61,7 @@ sqlite_file = "/path-to-your-Publii-folder/sites/site-name/input/db.sqlite"
 ### 4. Run the script
 
 ```bash
-python3 NewYorkerifization.py
+python3 diaeresis-updater.py
 ```
 
 Example output:
