@@ -94,6 +94,7 @@ roots = {
     "gonna": "going to",
     "wanna": "want to",
     "kinda": "kind of",
+    "...": "…",
 }
 
 # Create capitalization variants automatically
