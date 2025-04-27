@@ -4,7 +4,7 @@ This Python script scans your [Publii](https://getpublii.com/) site's SQLite dat
 
 - Correctly apply **diaereses** (¨) to appropriate words (e.g., `cooperate` ➔ `coöperate`)
 - Optionally replace **straight quotes** with **smart (curly) quotes** (e.g., `"example"` ➔ `“example”`)
-- Fix common casual word usages (e.g., `webpage` ➔ `Web page`, `gonna` ➔ `going to`)
+- Correct common informal word usages (e.g., `webpage` ➔ `Web page`, `gonna` ➔ `going to`)
 
 It ensures a more precise, formal, and polished English writing style across your site.
 
@@ -13,6 +13,8 @@ It ensures a more precise, formal, and polished English writing style across you
 ## Why use it?
 
 English words that combine vowels across syllables (like "cooperate" or "reelect") traditionally used the diaeresis to clarify pronunciation. Restoring this usage improves readability and reflects a more careful, literate style.
+
+Though the diaeresis (¨) has largely fallen out of everyday use in modern English, it serves an important linguistic purpose: providing clarity in pronunciation by indicating where adjacent vowels should be separated into distinct syllables. Without it, words like “cooperate” or “reenter” may briefly confuse readers, who might misinterpret the structure of the word. Properly applied, the diaeresis preserves the rhythm, flow, and precision of English. While most publications have abandoned its use, [The New Yorker](https://www.newyorker.com) has notably and bravely maintained the tradition, recognizing that careful attention to typography can enhance both the clarity and the beauty of language.
 
 Similarly, replacing straight quotation marks with smart (curly) quotes enhances typographic quality and aligns your site with professional publishing standards.
 
@@ -95,7 +97,7 @@ Apply changes to your database:
 python3 diaeresis-updater.py
 ```
 
-Skip the backup (not recommended)
+Skip the backup (optional, not recommended)
 
 ```bash
 python3 diaeresis-updater.py --no-backup
