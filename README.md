@@ -43,7 +43,7 @@ After:
 
 ---
 
-## ⚠️ Important Warning
+## ⚠️ Important warning
 
 **Please read carefully before using this tool.**
 
