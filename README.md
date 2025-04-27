@@ -73,6 +73,10 @@ Updated row 47 in table posts
 Done.
 ```
 
+### 5. Sync your website
+
+With the changes made in the database, press the "Sync your website" button on Publii to push all changes to your live website.
+
 ---
 
 ## Important
