@@ -2,7 +2,7 @@ import sqlite3
 import re
 import os
 
-# Define your replacement roots
+# Define your replacement roots. Note that capitalization of words is preserved.
 roots = {
     "cooperate": "coöperate",
     "cooperated": "coöperated",
@@ -52,6 +52,14 @@ roots = {
     "reenergize": "reënergize",
     "reenergized": "reënergized",
     "reenergizing": "reënergizing",
+    "reenlist": "reënlist",
+    "reenlisted": "reënlisted",
+    "reenlisting": "reënlisting",
+    "reenlistment": "reënlistment",
+    "reencounter": "reëncounter",
+    "reencountered": "reëncountered",
+    "reencountering": "reëncountering",
+    "reengagement": "reëngagement",
     "reevaluate": "reëvaluate",
     "reevaluated": "reëvaluated",
     "reevaluating": "reëvaluating",
