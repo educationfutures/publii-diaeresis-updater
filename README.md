@@ -16,7 +16,7 @@ English words that combine vowels across syllables (like "cooperate" or "reelect
 
 Similarly, replacing straight quotation marks with smart (curly) quotes enhances typographic quality and aligns your site with professional publishing standards.
 
-This script allows you to make these corrections **automatically and safely** across your Publii site.
+This script allows you to make these corrections **automatically** across your Publii site.
 
 ---
 
