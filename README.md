@@ -31,15 +31,28 @@ This script allows you to make these corrections **automatically and safely** ac
 
 ---
 
+## ⚠️ Important Warning
+
+**Please read carefully before using this tool.**
+
+- Always make your own manual backup of your Publii site's `db.sqlite` file before running the script — even though the script will automatically create a `.bak` copy.
+- If used improperly or on the wrong file, the script could unintentionally modify your database.
+- Always run a `--dry-run` first to preview the changes.
+- Only proceed with full updates once you have verified the changes are safe and appropriate for your site.
+
+**Use at your own risk.**
+
+---
+
 ## Example
 
 Before:
 
-> Cooperation and coordination are key to reevaluating our plans.
+> Cooperation and "coordination" are key to reevaluating our plans.
 
 After:
 
-> Coöperation and coördination are key to reëvaluating our plans.
+> Coöperation and “coördination” are key to reëvaluating our plans.
 
 ---
 
