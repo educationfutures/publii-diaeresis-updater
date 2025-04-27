@@ -1,4 +1,4 @@
-# Diaeresis and Smart Quotes Updater for Publii
+# Diaeresis and smart quotes updater for Publii
 
 This Python script scans your [Publii](https://getpublii.com/) site's SQLite database and updates text inside posts to:
 
