@@ -114,7 +114,7 @@ With the changes made in the database, press the "Sync your website" button on P
 
 ## Important
 
-- This script **always makes a backup** of your Publii database before running unless --no-backup is specified.
+- This script **always makes a backup** of your Publii database before running unless `--no-backup` is specified.
 - This script directly modifies your database upon execution.
 - It only replaces words explicitly defined in its built-in dictionary.
 
