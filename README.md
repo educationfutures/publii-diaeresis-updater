@@ -55,13 +55,7 @@ cd publii-diaeresis-updater
 Open `NewYorkerifization.py` and modify this line to point to your database:
 
 ```python
-sqlite_file = "/path/to/your/publii-site/database/database.db"
-```
-
-Typically, Publii databases are located at:
-
-```
-/your-site-folder/output/database/database.db
+sqlite_file = "/path-to-your-Publii-folder/sites/site-name/input/db.sqlite"
 ```
 
 ### 4. Run the script
