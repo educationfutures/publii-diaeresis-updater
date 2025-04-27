@@ -8,7 +8,7 @@ import sys
 sqlite_file = "/path-to-your-Publii-folder/sites/site-name/input/db.sqlite"  # <-- Adjust to your path
 dry_run = "--dry-run" in sys.argv
 create_backup = "--no-backup" not in sys.argv
-apply_smart_quotes = False  # Set True if you ever want to enable smart quotes -- note this currently may break your embedded HTML
+apply_smart_quotes = True  # Set False if you want to disable smart quotes
 
 print(f"Dry run mode: {dry_run}")
 print(f"Create backup: {create_backup}")
@@ -103,7 +103,7 @@ for k, v in roots.items():
     replacements[k] = v
     replacements[k.capitalize()] = v.capitalize()
 
-# Smart quotes fixer
+# Smart quotes fixer (HTML-safe)
 def fix_smart_quotes(text):
     if text is None:
         return text, False
@@ -112,39 +112,50 @@ def fix_smart_quotes(text):
 
     original_text = text
 
-    # Handle double quotes
+    # Split the text into parts: HTML tags and non-tags
+    parts = re.split(r'(<[^>]+>)', text)
     result = []
     double_quote_open = True
-    for char in text:
-        if char == '"':
-            if double_quote_open:
-                result.append('“')
-            else:
-                result.append('”')
-            double_quote_open = not double_quote_open
-        else:
-            result.append(char)
-    text = ''.join(result)
-
-    # Handle apostrophes and single quotes
-    text = re.sub(r"(\w)'(\w)", r"\1’\2", text)
-
-    result = []
     single_quote_open = True
-    for char in text:
-        if char == "'":
-            if single_quote_open:
-                result.append('‘')
-            else:
-                result.append('’')
-            single_quote_open = not single_quote_open
+
+    for part in parts:
+        if part.startswith('<') and part.endswith('>'):
+            # It's an HTML tag — don't touch it
+            result.append(part)
         else:
-            result.append(char)
+            # It's normal text — apply smart quotes
+            temp = []
+            for char in part:
+                if char == '"':
+                    if double_quote_open:
+                        temp.append('“')
+                    else:
+                        temp.append('”')
+                    double_quote_open = not double_quote_open
+                else:
+                    temp.append(char)
+            part = ''.join(temp)
 
-    text = ''.join(result)
+            # Apostrophes inside words like don't, won't
+            part = re.sub(r"(\w)'(\w)", r"\1’\2", part)
 
-    changed = (text != original_text)
-    return text, changed
+            # Single quotes outside words
+            temp = []
+            for char in part:
+                if char == "'":
+                    if single_quote_open:
+                        temp.append('‘')
+                    else:
+                        temp.append('’')
+                    single_quote_open = not single_quote_open
+                else:
+                    temp.append(char)
+
+            result.append(''.join(temp))
+
+    new_text = ''.join(result)
+    changed = (new_text != original_text)
+    return new_text, changed
 
 # Main text fixer
 def fix_text(text):
