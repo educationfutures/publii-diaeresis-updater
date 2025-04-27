@@ -33,6 +33,18 @@ This script helps by:
 
 ---
 
+## Example
+
+Before:
+
+> Cooperation and coordination are key to reevaluating our plans.
+
+After:
+
+> Coöperation and coördination are key to reëvaluating our plans.
+
+---
+
 ## Installation and usage
 
 ### 1. Requirements
@@ -93,18 +105,6 @@ Contributions, bug reports, and suggestions are very welcome!
 
 - Submit an issue to suggest new words or report problems.
 - Open a pull request to contribute improvements or features.
-
----
-
-## Example
-
-Before:
-
-> Cooperation and coordination are key to reevaluating our plans.
-
-After:
-
-> Coöperation and coördination are key to reëvaluating our plans.
 
 
 ---
