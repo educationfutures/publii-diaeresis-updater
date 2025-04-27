@@ -31,6 +31,18 @@ This script allows you to make these corrections **automatically and safely** ac
 
 ---
 
+## Example
+
+Before:
+
+> Cooperation and "coordination" are key to reevaluating our plans.
+
+After:
+
+> Coöperation and “coördination” are key to reëvaluating our plans.
+
+---
+
 ## ⚠️ Important Warning
 
 **Please read carefully before using this tool.**
@@ -41,18 +53,6 @@ This script allows you to make these corrections **automatically and safely** ac
 - Only proceed with full updates once you have verified the changes are safe and appropriate for your site.
 
 **Use at your own risk.**
-
----
-
-## Example
-
-Before:
-
-> Cooperation and "coordination" are key to reevaluating our plans.
-
-After:
-
-> Coöperation and “coördination” are key to reëvaluating our plans.
 
 ---
 
