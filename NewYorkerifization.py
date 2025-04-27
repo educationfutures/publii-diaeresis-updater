@@ -135,5 +135,5 @@ def process_sqlite_file(sqlite_path):
     print("Done.")
 
 if __name__ == "__main__":
-    sqlite_file = "/path/to/your/publii-site/database/db.sqlite"  # <-- Change this to your SQLite file path
+    sqlite_file = "/path-to-your-Publii-folder/sites/site-name/input/db.sqlite"  # <-- Change this to your SQLite file path
     process_sqlite_file(sqlite_file)
