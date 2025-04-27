@@ -10,9 +10,6 @@ dry_run = "--dry-run" in sys.argv
 create_backup = "--no-backup" not in sys.argv
 apply_smart_quotes = True  # Set False if you want to disable smart quotes
 
-print(f"Dry run mode: {dry_run}")
-print(f"Create backup: {create_backup}")
-
 # Define your replacement roots
 roots = {
     "coequal": "coëqual",
@@ -96,6 +93,9 @@ roots = {
     "kinda": "kind of",
     "...": "…",
 }
+
+print(f"Dry run mode: {dry_run}")
+print(f"Create backup: {create_backup}")
 
 # Create capitalization variants automatically
 replacements = {}
