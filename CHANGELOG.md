@@ -17,3 +17,4 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Automatic creation of `.bak` backup files (unless disabled via `--no-backup`).
 - Detailed change report listing only the specific words corrected in each post.
 - Safe targeting of the `posts` table and `title`/`text` columns only.
+- Ignores quotes insdie HTML tags.
