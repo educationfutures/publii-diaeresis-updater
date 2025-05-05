@@ -4,7 +4,7 @@ This Python script scans your [Publii](https://getpublii.com/) site's SQLite dat
 
 - Correctly apply **diaereses** (¨) to appropriate words (e.g., `cooperate` ➔ `coöperate`)
 - Optionally replace **straight quotes** with **smart (curly) quotes** (e.g., `"example"` ➔ `“example”`)
-- Correct common informal word usages (e.g., `webpage` ➔ `Web page`, `gonna` ➔ `going to`)
+- Correct common informal word usages (e.g., `anyways` ➔ `anyway`, `gonna` ➔ `going to`)
 
 It ensures a more precise, formal, and polished English writing style across your site.
 
